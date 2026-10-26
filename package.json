@@ -1,0 +1,41 @@
+{
+  "name": "godot-prompter",
+  "version": "1.16.0",
+  "type": "module",
+  "main": ".opencode/plugins/godot-prompter.js",
+  "description": "Agentic skills framework for Godot 4.x game development — GDScript & C#",
+  "author": "jame581",
+  "license": "MIT",
+  "scripts": {
+    "test:hooks": "node --test tests/hooks/session-start.test.mjs",
+    "test:validator": "node --test tests/validator/parity-exemption.test.mjs tests/validator/nonexistent-api.test.mjs tests/validator/scanner-patterns.test.mjs",
+    "test:opencode": "node --test tests/opencode/plugin.test.mjs",
+    "test:metadata": "node --test tests/validator/frontmatter.test.mjs tests/validator/agent-mirror-sync.test.mjs tests/validator/skill-index.test.mjs tests/validator/platform-metadata.test.mjs tests/validator/mentor-editor-references.test.mjs tests/validator/directory-bundle.test.mjs tests/validator/marketplace-readme.test.mjs",
+    "test": "npm run test:hooks && npm run test:validator && npm run test:opencode && npm run test:metadata",
+    "validate": "node scripts/validate-skills.mjs",
+    "sync:codex-agents": "node scripts/sync-codex-agents.mjs --write",
+    "check:codex-agents": "node scripts/sync-codex-agents.mjs --check",
+    "build:skill-index": "node scripts/generate-skill-index.mjs --write",
+    "check:skill-index": "node scripts/generate-skill-index.mjs --check",
+    "validate:platform-metadata": "node scripts/validate-platform-metadata.mjs",
+    "check:directory-bundle": "node scripts/build-directory-bundle.mjs --check"
+  },
+  "keywords": [
+    "godot",
+    "gamedev",
+    "gdscript",
+    "csharp",
+    "skills",
+    "claude-code",
+    "copilot",
+    "antigravity",
+    "cursor",
+    "codex",
+    "opencode",
+    "grok"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jame581/GodotPrompter.git"
+  }
+}
